@@ -31,7 +31,7 @@ db.once('open', function(){
     const recipeSchema = new mongoose.Schema({
         name : {type: String, required: true, maxlength: 100},
         description : {type: String, required: true, maxlength: 250},
-        instructions : {type: String, required: true, maxlength: 750},
+        instructions : {type: String, required: true, maxlength: 500},
         ingredients : [ingredientSchema],
         /*ingredients: [{
             ingredientName: String,
