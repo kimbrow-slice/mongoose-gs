@@ -44,7 +44,7 @@ db.once('open', function(){
     
     
 
-    //method, just to do some checking. Will print comment to see if it's working
+    //method, the makeIT function to make sure things are running
     recipeSchema.methods.makeIT = function(){
     let name;
 
@@ -115,7 +115,7 @@ db.once('open', function(){
 
     });
 
-    //save the recipes into the DB
+    //save recipes to db
     topRamen.save(function(err, recipe){
         //return error code if not saved
         if (err) return console.error(err);
@@ -126,7 +126,7 @@ db.once('open', function(){
         if (err) return console.error(err);
         recipe.test();
     });
-    //find all the recipes and print, error if not found
+    //find all the recipes and print error out if it isnt found
     
     /*topRamen.test();
     macAndCheese.test();
@@ -173,7 +173,7 @@ topRamen.name = "Everything a college kid could ask for!";
 //delete the lazy recipe I made
     Recipe.deleteOne({ name: "Reeses Puffs Cereal"}, function(err){
         if (err) console.error(err);
-        console.log("Deleted");
+        console.log("Delete");
     });
     
     Recipe.find(function(err,recipe){
@@ -181,7 +181,7 @@ topRamen.name = "Everything a college kid could ask for!";
         console.log(recipe);
     });
     //update function 
-     /*Recipe.updateOne({macAndCheese}, { amount: -.5},function(err){
+     /*Recipe.updateOne({macAndCheese}, { amount: -1},function(err){
          if (err) return console.error(err);
          console.log(Recipe[1]);
          //macAndCheese.ingredients;
